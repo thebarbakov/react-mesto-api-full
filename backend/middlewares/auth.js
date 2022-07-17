@@ -16,7 +16,7 @@ const userAuth = async (req, res, next) => {
     if (!userInfo) {
       return next(new UnauthorizedError('Необходима авторизация'));
     }
-    console.log(userInfo);
+
     req.user = userInfo;
 
     return next();

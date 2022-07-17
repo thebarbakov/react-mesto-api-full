@@ -67,7 +67,7 @@ const createUser = async (req, res, next) => {
 
 const getUser = async (req, res, next) => {
   try {
-    const user = await User.findById(req.params.userId);
+    const user = await User.findOne({ _id: req.params.userId });
 
     if (!user) {
       return next(new NotFound('Пользователь не найден'));
@@ -142,7 +142,7 @@ const updateAvatar = async (req, res, next) => {
 
 const getUserInfo = async (req, res, next) => {
   try {
-    const user = await User.findById(req.user._id);
+    const user = await User.findOne({ _id: req.user._id });
 
     return res.status(200).json(user);
   } catch (e) {
