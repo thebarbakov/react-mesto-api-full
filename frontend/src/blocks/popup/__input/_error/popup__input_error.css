@@ -1,0 +1,15 @@
+.popup__input_error {
+    border-bottom: #FF0000 solid 1px;
+}
+
+.popup__input_error:active {
+    border-bottom: #FF0000 solid 1px;
+}
+
+.popup__input_error:hover {
+    border-bottom: #FF0000 solid 1px;
+}
+
+.popup__input_error:focus {
+    border-bottom: #FF0000 solid 1px;
+}

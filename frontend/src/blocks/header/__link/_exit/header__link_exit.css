@@ -1,0 +1,13 @@
+.header__link_exit {
+  color: #a9a9a9;
+}
+
+@media screen and (max-width: 767px) {
+  .header__link_exit {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #a9a9a9;
+  }
+}

@@ -1,0 +1,48 @@
+.autorisation__input {
+    width: 100%;
+    margin: 30px auto 0 auto;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #CCCCCC solid;
+    font-size: 14px;
+    line-height: 17px;
+    color: #CCCCCC;
+    padding-bottom: 13px;
+}
+
+.autorisation__input:active {
+    background-color: transparent;
+    outline: 0;
+    outline-offset: 0;
+}
+
+.autorisation__input:hover {
+    background-color: transparent;
+    outline: 0;
+    outline-offset: 0;
+}
+
+.autorisation__input:focus {
+    background-color: transparent;
+    outline: 0;
+    outline-offset: 0;
+    border-bottom: 2px #CCCCCC solid;
+}
+
+.autorisation__input:first-of-type {
+    margin-top: 50px;
+}
+
+/* @media screen and (max-width: 767px){
+    .popup__input {
+        width: 238px;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 30px 22px 0 22px;
+    }
+
+    .popup__input:first-of-type {
+        margin-top: 70px;
+    }
+} */
+  

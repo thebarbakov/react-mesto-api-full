@@ -1,0 +1,14 @@
+.popup__indicator {
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    background-size: 100%;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__indicator {
+        margin-top: 50px;
+    }
+  }
+  

@@ -1,0 +1,7 @@
+.autorisation__buttom_disabled {
+    opacity: 0.2;
+    background-color: black;
+    color: white;
+    border: white 1px solid;
+    pointer-events: none;
+}

@@ -1,0 +1,14 @@
+.popup__set {
+margin-inline-start: 0;
+margin-inline-end: 0;
+padding-block-start: 0;
+padding-inline-start: 0;
+padding-inline-end: 0;
+padding-block-end: 0;
+min-inline-size: 0;
+border-width: 0;
+border-style: 0;
+border-color: 0;
+border-image: 0;
+padding: 0;
+}
