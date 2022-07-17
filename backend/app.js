@@ -39,7 +39,8 @@ const allowedCors = [
   'localhost:3000',
   'http://localhost:3000',
   'http://127.0.0.1:3000',
-  /(https|http)?:\/\/(?:www\.|(?!www))mesto.online.nomoredomains.work\/[a-z]+\/|[a-z]+\/|[a-z]+(\/|)/,
+  'http://mesto.calsser.ru',
+  'https://mesto.calsser.ru',
 ];
 
 app.use((req, res, next) => {
@@ -72,7 +73,7 @@ app.get('/crash-test', () => {
 });
 
 app.post(
-  '/signin',
+  '/api/signin',
   celebrate({
     body: Joi.object().keys({
       email: Joi.string().required().email(),
@@ -82,7 +83,7 @@ app.post(
   login,
 );
 app.post(
-  '/signup',
+  '/api/signup',
   celebrate({
     body: Joi.object().keys({
       name: Joi.string().min(2).max(30),
@@ -97,8 +98,8 @@ app.post(
 
 app.use(userAuth);
 
-app.use('/users', require('./routes/users'));
-app.use('/cards', require('./routes/cards'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/cards', require('./routes/cards'));
 
 app.all('*', (req, res, next) => {
   next(new NotFound('Неправильный путь'));
