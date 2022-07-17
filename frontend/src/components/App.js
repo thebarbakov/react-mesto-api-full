@@ -127,7 +127,7 @@ class App extends React.Component {
     api
       .setUserInfo({ name: profileName, about: profileJob })
       .then((newUserInfo) => {
-        this.setState({ currentUser: newUserInfo });
+        this.setState({ currentUser: {...this.state.currentUser, name: newUserInfo.name, about: newUserInfo.about} });
         this.closeAllPopups();
       })
       .catch((rej) => console.error(`Error: ${rej.status}`))
@@ -201,7 +201,7 @@ class App extends React.Component {
 
   submitLogOut = () => {
     localStorage.removeItem("userData");
-    this.setState({ isLogged: false, loggedEmail: null });
+    this.setState({ isLogged: false, loggedEmail: null, currentUser: {} });
   };
 
   render() {
