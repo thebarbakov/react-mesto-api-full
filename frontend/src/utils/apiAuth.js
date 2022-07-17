@@ -33,7 +33,7 @@ class ApiAuth {
         return fetch(`${this._urlRequest}/users/me`, {
             method: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("userData")).token || "",
+                'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("userData")) || "",
             }
         })
         .then( res => this._checkResponse(res))

@@ -95,7 +95,7 @@ const api = new Api(
         urlRequest: 'https://mesto.calsser.ru/api',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("userData")).token || "",
+            'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("userData")) || "",
         }
     }
 )
