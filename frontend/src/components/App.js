@@ -74,7 +74,7 @@ class App extends React.Component {
         .verifyUserInfo()
         .then((res) => {
           this.setState({ isLogged: true });
-          this.setState({ loggedEmail: res.data.email });
+          this.setState({ loggedEmail: res.email });
         })
         .catch((rej) => console.log(rej));
     }
