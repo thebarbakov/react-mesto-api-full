@@ -68,7 +68,7 @@ const likeCard = async (req, res, next) => {
         new NotFound('Запрашиваемая карточка для добавления лайка не найдена'),
       );
     }
-    return res.status(200).json({ message: 'Ok!' });
+    return res.status(200).json(card);
   } catch (e) {
     return next(e);
   }
@@ -86,7 +86,7 @@ const dislikeCard = async (req, res, next) => {
         new NotFound('Запрашиваемая карточка для добавления лайка не найдена'),
       );
     }
-    return res.status(200).json({ message: 'Ok!' });
+    return res.status(200).json(card);
   } catch (e) {
     return next(e);
   }
