@@ -17,9 +17,7 @@ class Card extends React.Component {
 
   render() {
     const isOwn = this.props.card.owner === this.context._id;
-    const isLiked = this.props.card.likes.some(
-      (cardLikers) => cardLikers._id === this.context._id
-    );
+    const isLiked = this.props.card.likes.includes(this.context._id);
     return (
       <div className="element">
         <img
