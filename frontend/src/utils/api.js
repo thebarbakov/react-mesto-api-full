@@ -100,7 +100,7 @@ class Api{
 
 const api = new Api(
     {
-        urlRequest: 'https://nomoreparties.co/v1/cohort-39',
+        urlRequest: '/api',
         headers: {
             'Content-Type': 'application/json'
         }

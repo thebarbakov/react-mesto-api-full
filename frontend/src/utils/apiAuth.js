@@ -43,7 +43,7 @@ class ApiAuth {
 
 const apiAuth = new ApiAuth(
     {
-        urlRequest: 'https://auth.nomoreparties.co',
+        urlRequest: '/api',
         headers: {
             'Content-Type': 'application/json',
         }
