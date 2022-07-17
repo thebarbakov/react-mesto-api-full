@@ -8,8 +8,6 @@ const CastError = require('../errors/CastError');
 
 const User = require('../models/User');
 
-require('dotenv').config();
-
 const { JWT_SECRET = 'JWT_SECRET' } = process.env;
 
 const login = async (req, res, next) => {
