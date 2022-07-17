@@ -43,7 +43,7 @@ class ApiAuth {
 
 const apiAuth = new ApiAuth(
     {
-        urlRequest: '/api',
+        urlRequest: 'https://mesto.calsser.ru/api',
         headers: {
             'Content-Type': 'application/json',
         }

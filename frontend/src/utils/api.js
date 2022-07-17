@@ -100,7 +100,7 @@ class Api{
 
 const api = new Api(
     {
-        urlRequest: '/api',
+        urlRequest: 'https://mesto.calsser.ru/api',
         headers: {
             'Content-Type': 'application/json'
         }
