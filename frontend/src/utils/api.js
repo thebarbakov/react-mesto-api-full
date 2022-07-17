@@ -15,7 +15,6 @@ class Api{
         return fetch(`${this._urlRequest}/users/me`, {
             method: 'GET',
             headers: this._headers,
-            credentials: 'include',
         })
         .then( res => this._checkResponse(res))
     }
@@ -24,7 +23,6 @@ class Api{
         return fetch(`${this._urlRequest}/cards`, {
             method: 'GET',
             headers: this._headers,
-            credentials: 'include',
         })
         .then( res => this._checkResponse(res))
     }
@@ -37,7 +35,6 @@ class Api{
         return fetch(`${this._urlRequest}/users/me`, {
         method: 'PATCH',
         headers: this._headers,
-        credentials: 'include',
         body: JSON.stringify(newUserInfo)
         })
         .then( res => {return this._checkResponse(res)})
@@ -47,7 +44,6 @@ class Api{
         return fetch(`${this._urlRequest}/users/me/avatar`, {
         method: 'PATCH',
         headers: this._headers,
-        credentials: 'include',
         body: JSON.stringify(newAvatar)
         })
         .then( res => {return this._checkResponse(res)})
@@ -57,7 +53,6 @@ class Api{
         return fetch(`${this._urlRequest}/cards`, {
         method: 'POST',
         headers: this._headers,
-        credentials: 'include',
         body: JSON.stringify(cardData)
         })
         .then( res => {return this._checkResponse(res)})
@@ -67,7 +62,6 @@ class Api{
         return fetch(`${this._urlRequest}/cards/${cardId}`, {
         method: 'DELETE',
         headers: this._headers,
-        credentials: 'include',
         })
         .then( res => {
             return this._checkResponse(res)
@@ -79,7 +73,6 @@ class Api{
             return fetch(`${this._urlRequest}/cards/${cardId}/likes`, {
                 method: 'PUT',
                 headers: this._headers,
-                credentials: 'include',
                 })
                 .then(res => {
                     return this._checkResponse(res)
@@ -88,7 +81,6 @@ class Api{
             return fetch(`${this._urlRequest}/cards/${cardId}/likes`, {
                 method: 'DELETE',
                 headers: this._headers,
-                credentials: 'include',
                 })
                 .then(res => {
                     return this._checkResponse(res)
@@ -102,7 +94,8 @@ const api = new Api(
     {
         urlRequest: 'https://mesto.calsser.ru/api',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("userData")).token || "",
         }
     }
 )

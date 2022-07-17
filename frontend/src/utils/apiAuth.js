@@ -15,7 +15,6 @@ class ApiAuth {
         return fetch(`${this._urlRequest}/signup`, {
             method: 'POST',
             headers: this._headers,
-            credentials: 'include',
             body: JSON.stringify({ password, email})
         })
         .then( res => this._checkResponse(res))
@@ -25,16 +24,17 @@ class ApiAuth {
         return fetch(`${this._urlRequest}/signin`, {
             method: 'POST',
             headers: this._headers,
-            credentials: 'include',
             body: JSON.stringify({ password, email})
         })
         .then( res => this._checkResponse(res))
     }
 
-    verifyUserInfo(token){
+    verifyUserInfo(){
         return fetch(`${this._urlRequest}/users/me`, {
             method: 'GET',
-            credentials: 'include',
+            headers: {
+                'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("userData")).token || "",
+            }
         })
         .then( res => this._checkResponse(res))
     }

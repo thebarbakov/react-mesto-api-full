@@ -71,7 +71,7 @@ class App extends React.Component {
   componentDidMount() {
     if (localStorage.getItem("userData") !== null) {
       apiAuth
-        .verifyUserInfo(localStorage.getItem("userData"))
+        .verifyUserInfo()
         .then((res) => {
           this.setState({ isLogged: true });
           this.setState({ loggedEmail: res.data.email });

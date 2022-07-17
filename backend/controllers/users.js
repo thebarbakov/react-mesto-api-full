@@ -28,10 +28,7 @@ const login = async (req, res, next) => {
 
     const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '7d' });
 
-    return res.status(200).cookie('jwt', token, {
-      maxAge: 604800,
-      httpOnly: true,
-    }).send({ token });
+    return res.status(200).send({ token });
   } catch (e) {
     return next(e);
   }
@@ -58,8 +55,6 @@ const createUser = async (req, res, next) => {
     const newUser = await user.save();
 
     newUser.password = undefined;
-
-    console.log(newUser);
 
     return res.status(201).json(newUser);
   } catch (e) {
