@@ -188,7 +188,7 @@ class App extends React.Component {
     apiAuth
       .loginUser({ email: email, password: password })
       .then((res) => {
-        localStorage.setItem("userData");
+        localStorage.setItem("userData", res["token"]);
         this.setState({ isLogged: true, loggedEmail: email });
         this.props.router.navigate("/", { replace: true });
       })
