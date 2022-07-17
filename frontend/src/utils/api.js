@@ -17,7 +17,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization:
-          "Bearer " + JSON.parse(localStorage.getItem("userData")) || "",
+          "Bearer " + localStorage.getItem("userData") || "",
       },
     }).then((res) => this._checkResponse(res));
   }
@@ -28,7 +28,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization:
-          "Bearer " + JSON.parse(localStorage.getItem("userData")) || "",
+          "Bearer " + localStorage.getItem("userData") || "",
       },
     }).then((res) => this._checkResponse(res));
   }
@@ -43,7 +43,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization:
-          "Bearer " + JSON.parse(localStorage.getItem("userData")) || "",
+          "Bearer " + localStorage.getItem("userData") || "",
       },
       body: JSON.stringify(newUserInfo),
     }).then((res) => {
@@ -57,7 +57,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization:
-          "Bearer " + JSON.parse(localStorage.getItem("userData")) || "",
+          "Bearer " + localStorage.getItem("userData") || "",
       },
       body: JSON.stringify(newAvatar),
     }).then((res) => {
@@ -71,7 +71,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization:
-          "Bearer " + JSON.parse(localStorage.getItem("userData")) || "",
+          "Bearer " + localStorage.getItem("userData") || "",
       },
       body: JSON.stringify(cardData),
     }).then((res) => {
@@ -85,7 +85,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization:
-          "Bearer " + JSON.parse(localStorage.getItem("userData")) || "",
+          "Bearer " + localStorage.getItem("userData") || "",
       },
     }).then((res) => {
       return this._checkResponse(res);
@@ -99,7 +99,7 @@ class Api {
         headers: {
           ...this._headers,
           Authorization:
-            "Bearer " + JSON.parse(localStorage.getItem("userData")) ||
+            "Bearer " + localStorage.getItem("userData") ||
             "",
         },
       }).then((res) => {
@@ -111,7 +111,7 @@ class Api {
         headers: {
           ...this._headers,
           Authorization:
-            "Bearer " + JSON.parse(localStorage.getItem("userData")) ||
+            "Bearer " + localStorage.getItem("userData") ||
             "",
         },
       }).then((res) => {
