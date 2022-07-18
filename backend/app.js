@@ -36,9 +36,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const allowedCors = [
-  'localhost:3000',
-  'http://localhost:3000',
-  'http://127.0.0.1:3000',
   'http://mesto.calsser.ru',
   'https://mesto.calsser.ru',
 ];
